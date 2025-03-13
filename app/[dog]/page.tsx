@@ -6,23 +6,23 @@ interface BreedImage{
     status: string;
 }
 
-interface PostProps {
+interface param {
     params: {
       dog: string;
     };
   }
 
-export default async function Page({ params }: PostProps) {
+export default async function Page({ params }: param) {
     
     const breedPics=[];
-    
-    const response = await fetch(`https://dog.ceo/api/breed/${params.dog}/images`, { cache: 'no-store' });
+    const dog = await params.dog;
+    const response = await fetch(`https://dog.ceo/api/breed/${dog}/images`, { cache: 'no-store' });
     var data: BreedImage = await response.json();
     breedPics.push(data);
     
   return (
     <div className="fade-in">
-        <h1 className="text-center text-4xl mb-8">{params.dog}</h1>
+        <h1 className="text-center text-4xl mb-8">{dog}</h1>
         <div id="dogList" className="flex flex-col items-center justify-center">
             <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-2">
                 {breedPics.map((breedPic, index) =>
