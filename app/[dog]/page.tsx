@@ -19,6 +19,7 @@ const fetchBreedImages = async (dog: string): Promise<BreedImage> => {
 
 const DynamicPage: FC<PageProps> = async ({ params }) => {
     const { dog } = params;
+
     const breedPic = await fetchBreedImages(dog);
 
     return (
