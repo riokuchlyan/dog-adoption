@@ -17,7 +17,6 @@ export default async function Browse({
 
     const response = await fetch(`https://dog.ceo/api/breeds/list/all`, { cache: 'no-store' });
     var data: dogBreedsResponse = await response.json();
-    console.log(data);
     dogBreedsList.push(data);
     
 
