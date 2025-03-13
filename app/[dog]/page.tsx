@@ -6,7 +6,13 @@ interface BreedImage{
     status: string;
 }
 
-export default async function Page({ params }: { params: { dog: string }, searchParams: {} }) {
+interface PostProps {
+    params: {
+      dog: string;
+    };
+  }
+
+export default async function Page({ params }: PostProps) {
     
     const breedPics=[];
     
