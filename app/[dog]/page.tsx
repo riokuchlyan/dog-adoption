@@ -14,8 +14,8 @@ interface param {
 
 export default async function Page({ params }: param) {
     
-    const breedPics=[];
-    const dog = await params.dog;
+    const breedPics: BreedImage[] = [];
+    const { dog } = params;
     const response = await fetch(`https://dog.ceo/api/breed/${dog}/images`, { cache: 'no-store' });
     var data: BreedImage = await response.json();
     breedPics.push(data);
