@@ -1,5 +1,3 @@
-import { FC } from "react";
-import Image from "next/image"
 import '../animations.css';
 
 export default function Page({ params }: { params: { dog: string } }) {
