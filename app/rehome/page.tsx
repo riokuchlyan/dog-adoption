@@ -3,11 +3,8 @@ import { createClient } from '@/utils/supabase/server';
 import '../animations.css';
 import InputForm from "@/components/rehome-form";
 
-export default async function Adopt({
-    children,
-  }: Readonly<{
-    children: React.ReactNode;
-  }>) {
+export default async function Adopt(){
+     
 
     const supabase = await createClient();
     const  {data: instruments}  = await supabase

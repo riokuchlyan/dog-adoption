@@ -7,11 +7,7 @@ interface dogBreedsResponse{
   status: string;
 }
 
-export default async function Browse({
-    children,
-  }: Readonly<{
-    children: React.ReactNode;
-  }>) {
+export default async function Browse() {
 
     const dogBreedsList=[];
 
