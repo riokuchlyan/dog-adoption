@@ -2,11 +2,7 @@ import React from 'react';
 import { createClient } from '@/utils/supabase/server';
 import '../animations.css';
 
-export default async function Adopt({
-    children,
-  }: Readonly<{
-    children: React.ReactNode;
-  }>) {
+export default async function Adopt() {
 
     const allData: any[][] = [];
 
