@@ -10,6 +10,6 @@ const supabase = createClient(supabaseURL, supabaseAnonKey);
 export default async function WriteToSupabase(id: number, text: string){
     
     const  {data}  = await supabase
-    .from("dogs")
+    .from("test")
     .insert({id, user: text})
 }

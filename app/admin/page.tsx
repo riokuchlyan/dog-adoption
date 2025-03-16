@@ -9,7 +9,7 @@ export default async function Adopt() {
 
     const supabase = await createClient();
     const  {data: instruments}  = await supabase
-    .from("dog")
+    .from("test")
     .select("*")
 
 
@@ -17,8 +17,8 @@ export default async function Adopt() {
 
     if (instruments && instruments.length > 0) {
       for (let i = 0; i < instruments.length; i++) {
-      allData.push([instruments[i].id, instruments[i].breed]);
-      table += `<tr><td>${instruments[i].id}</td><td>${instruments[i].breed}</td></tr>`;
+      allData.push([instruments[i].id, instruments[i].user]);
+      table += `<tr><td>${instruments[i].id}</td><td>${instruments[i].user}</td></tr>`;
       }
     }
 
