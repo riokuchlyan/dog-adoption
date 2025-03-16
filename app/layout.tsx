@@ -39,9 +39,8 @@ export default function RootLayout({
                 <div>
                 </div>
                 <Link href="/" className="mx-2">HOME</Link>
-                <Link href="browse" className="mx-2">BROWSE DOGS</Link>
-                <Link href="/adopt" className="mx-2">ADOPT</Link>
-                <Link href="/rehome" className="mx-2">REHOME</Link>
+                <Link href="/browse" className="mx-2">BROWSE DOGS</Link>
+                <Link href="/admin" className="mx-2">ADMIN</Link>
               </div>
               </nav>
               <div className="flex flex-col gap-20 max-w-5xl p-5">
